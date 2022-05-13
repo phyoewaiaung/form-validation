@@ -1,0 +1,15 @@
+img {
+  width: 80%;
+  height: 400px;
+}
+#imageCenter {
+  text-align: center;
+}
+#iconCenter {
+  text-align: center;
+}
+#button {
+  color: #fff;
+  background-color: #000;
+  border-radius: 0.3em;
+}
