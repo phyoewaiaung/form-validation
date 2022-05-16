@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="newContactStyle.css" />
+  </head>
+  <body>
+    <div id="iconCenter">
+      <i class="fa fa-asterisk" aria-hidden="true"></i>
+      <h3>Become a Nike Member</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae earum ut,
+        itaque perspiciatis voluptas facilis voluptatibus eum assumenda. Error
+        voluptas libero cum quis architecto nulla quibusdam incidunt odit
+        pariatur laudantium.
+      </p>
+      <div class="marginBot">
+        <div>
+          <label id="fNameWarning" for=""></label>
+        </div>
+
+        <input 
+          type="text"
+          id="fName"
+          placeholder="Enter Your First Name"
+          value=""
+        />
+      </div>
+      <div class="marginBot">
+        <div>
+          <label id="lNameWarning" for=""></label>
+        </div>
+
+        <input
+          type="text"
+          id="lName"
+          placeholder="Enter Your Last Name"
+          value=""
+        />
+      </div>
+      <div class="marginBot">
+        <div>
+          <label id="emailWarning" for=""></label>
+        </div>
+
+        <input
+          type="text"
+          id="email"
+          placeholder="Enter Your Email"
+          value=""
+        />
+      </div>
+      <div class="marginBot">
+        <div>
+          <label id="passwordWarning" for=""></label>
+        </div>
+
+        <input 
+          type="text"
+          id="password"
+          placeholder="Enter Your Password"
+          value=""
+        />
+      </div>
+      <div class="marginBot">
+        <label id="paraForCheckbox"></label>
+      </div>
+      <div>
+        <input
+          class="marginBot"
+          type="checkbox"
+          id="checkBox1"
+          value="1"
+          onclick="chkOne()"
+        />Check One
+      </div>
+      <div>
+        <input
+        class="marginBot"
+        type="checkbox"
+        id="checkBox2"
+        value="1"
+        onclick="chkTwo()"
+      />Check Two
+    </div>
+      </div>
+      <div class="marginBot">
+        <button onclick="validate()" id="submitBtn">Submit</button>
+      </div>
+    </div>
+    <div id="iconCenter">
+      <h3 id="successHeader" class="mb-3"></h3>
+      <ul id="userData"></ul>
+    </div>
+    <div id="iconCenter">
+      <h3 id="dataWithTable" class="mb-3"></h3>
+    </div>
+    <div id="tableCenter">
+      <table id="userDataWithTable">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Password</th>
+        </tr>
+      </table>
+      <script src="newContactScript.js"></script>
+    </div>
+   <div id="changeData"></div>
+  </body>
+</html>

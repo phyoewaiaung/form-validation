@@ -1,0 +1,30 @@
+#iconCenter {
+  text-align: center;
+  margin-top: 20px;
+}
+#submitBtn:hover {
+  background-color: green;
+  color: #fff;
+  border-radius: 0.2em;
+}
+submitBtn {
+  border-radius: 0.2em;
+}
+.marginBot {
+  margin-bottom: 30px;
+  text-align: center;
+}
+h3 {
+  color: green;
+}
+ul li {
+  list-style-type: none;
+  font-weight: bold;
+}
+.hoverColor:hover {
+  background-color: lightblue;
+}
+#tableCenter {
+  display: flex;
+  justify-content: center;
+}

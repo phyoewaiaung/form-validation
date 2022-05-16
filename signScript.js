@@ -13,3 +13,6 @@ function isEqual() {
     invalidUser.style.color = "red";
   }
 }
+function goNewContact() {
+  window.open("newContact.html");
+}
