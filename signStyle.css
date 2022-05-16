@@ -4,11 +4,17 @@
   border: 1px solid gainsboro;
   border-radius: 0.2em;
 }
+#email:hover {
+  background-color: lightblue;
+}
 #password {
   width: 75%;
   height: 40px;
   border: 1px solid gainsboro;
   border-radius: 0.2em;
+}
+#password:hover {
+  background-color: lightblue;
 }
 #login {
   width: 75%;
@@ -19,6 +25,9 @@
   border: 0;
   border-radius: 0.2em;
 }
+#login:hover {
+  box-shadow: 3px 3px 3px black;
+}
 #btnBg {
   background-color: green;
   width: 35%;
@@ -26,6 +35,9 @@
   border: 0;
   border-radius: 0.2em;
   color: #fff;
+}
+#btnBg:hover {
+  box-shadow: 2px 2px 2px black;
 }
 #forgots {
   color: blue;
@@ -55,4 +67,7 @@ a {
   text-align: center;
   border: 0ch;
   border-radius: 0.2em;
+}
+#backToHome:hover {
+  box-shadow: 2px 2px 2px black;
 }

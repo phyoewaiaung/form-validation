@@ -1,6 +1,5 @@
 var compare = document.getElementById("login");
 var invalidUser = document.getElementById("invalidUser");
-console.log(compare);
 
 compare.addEventListener("click", isEqual);
 function isEqual() {
