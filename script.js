@@ -1,3 +1,5 @@
+var joinUsBtn = document.getElementById("button");
+joinUsBtn.addEventListener("click", validate);
 function validate() {
   var email = document.getElementById("email").value;
   var passWarn = document.getElementById("passwordWarning");
@@ -34,6 +36,7 @@ function validate() {
     fNameWarn.textContent =
       "Name cannot contains numbers and special characters";
     document.getElementById("firstName").style.border = "1px solid red";
+    document.getElementById("firstName").style.backgroundColor = "";
   }
   if (!(/\d/.test(fName) || format.test(fName))) {
     fNameWarn.textContent = "";
@@ -45,6 +48,7 @@ function validate() {
     lNameWarn.textContent =
       "Name cannot contains numbers and special characters";
     document.getElementById("lastName").style.border = "1px solid red";
+    document.getElementById("lastName").style.backgroundColor = "";
   }
   if (!(/\d/.test(lName) || format.test(lName))) {
     lNameWarn.textContent = "";
