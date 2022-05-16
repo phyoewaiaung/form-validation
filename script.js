@@ -1,6 +1,8 @@
+var userGender = "";
 var joinUsBtn = document.getElementById("button");
 joinUsBtn.addEventListener("click", validate);
 function validate() {
+  var emailWarn = document.getElementById("emailWarning");
   var email = document.getElementById("email").value;
   var passWarn = document.getElementById("passwordWarning");
   var pass = document.getElementById("password").value;
@@ -8,10 +10,15 @@ function validate() {
   var fName = document.getElementById("firstName").value;
   var lNameWarn = document.getElementById("lNameWarn");
   var lName = document.getElementById("lastName").value;
+  var calendarWarn = document.getElementById("calendarWarning");
   var calendar = document.getElementById("calendar").value;
+  var stateWarn = document.getElementById("stateWarning");
   var state = document.getElementById("states").value;
   var female = document.getElementById("female");
   var male = document.getElementById("male");
+  var checkboxWarn = document.getElementById("checkboxWarning");
+  var check = document.getElementById("check").value;
+  var userDataHeader = document.getElementById("userDataHeader");
   var userData = document.getElementById("userData");
   var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
   console.log("email", email);
@@ -21,47 +28,92 @@ function validate() {
   console.log("Date", calendar);
   console.log("State", state);
   console.log("user", userData);
-  userData.innerHTML = "<li>YourEmail -- " + email + "</li>";
+
+  if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+    emailWarn.textContent = "Enter Valid Email Address !!";
+    emailWarn.style.color = "red";
+  } else {
+    emailWarn.textContent = "";
+  }
+
   if (pass.length < 8) {
     passWarn.textContent = "password must be at least 8 characters long";
-    document.getElementById("password").style.border = "1px solid red";
-  }
-  if (pass.length >= 8) {
+    passWarn.style.color = "red";
+  } else {
     passWarn.textContent = "";
-    document.getElementById("password").style.border = 0;
-    document.getElementById("password").style.backgroundColor = "lightgreen";
-    userData.innerHTML += "<li>YourPassWord  -- " + pass + "</li>";
   }
-  if (/\d/.test(fName) || format.test(fName)) {
+  if (/\d/.test(fName) || format.test(fName) || fName == "") {
     fNameWarn.textContent =
-      "Name cannot contains numbers and special characters";
-    document.getElementById("firstName").style.border = "1px solid red";
-    document.getElementById("firstName").style.backgroundColor = "";
-  }
-  if (!(/\d/.test(fName) || format.test(fName))) {
+      "Name cannot contains numbers and special characters and Not Null!";
+    fNameWarn.style.color = "red";
+  } else {
     fNameWarn.textContent = "";
-    document.getElementById("firstName").style.border = 0;
-    document.getElementById("firstName").style.backgroundColor = "lightgreen";
-    userData.innerHTML += "<li>YourFirstName -- " + fName + "</li>";
   }
-  if (/\d/.test(lName) || format.test(lName)) {
+  if (/\d/.test(lName) || format.test(lName) || lName == "") {
     lNameWarn.textContent =
-      "Name cannot contains numbers and special characters";
-    document.getElementById("lastName").style.border = "1px solid red";
-    document.getElementById("lastName").style.backgroundColor = "";
-  }
-  if (!(/\d/.test(lName) || format.test(lName))) {
+      "Name cannot contains numbers and special characters and Not Null!";
+    lNameWarn.style.color = "red";
+  } else {
     lNameWarn.textContent = "";
-    document.getElementById("lastName").style.border = 0;
-    document.getElementById("lastName").style.backgroundColor = "lightgreen";
-    userData.innerHTML += "<li>YourLastName -- " + lName + "</li>";
   }
-  userData.innerHTML += "<li>DateOfBirth -- " + calendar + "</li>";
-  userData.innerHTML += "<li>Address -- " + state + "</li>";
+  if (calendar == "") {
+    calendarWarn.textContent = "Type Your Date in format";
+    calendarWarn.style.color = "red";
+  } else {
+    calendarWarn.textContent = "";
+  }
+  if (state == "") {
+    stateWarn.textContent = "Choose Your State";
+    stateWarn.style.color = "red";
+  } else {
+    stateWarn.textContent = "";
+  }
   if (female.checked) {
-    userData.innerHTML += "<li>Gender -- " + female.value + "</li>";
+    userGender = female.value;
   }
   if (male.checked) {
-    userData.innerHTML += "<li>Gender -- " + male.value + "</li>";
+    userGender = male.value;
+  }
+  if (check == "1") {
+    checkboxWarn.textContent = "You Need To Click Checkbox!";
+    checkboxWarn.style.color = "red";
+  } else {
+    checkboxWarn.textContent = "";
+  }
+  if (
+    emailWarn.textContent == "" &&
+    passWarn.textContent == "" &&
+    fNameWarn.textContent == "" &&
+    lNameWarn.textContent == "" &&
+    calendarWarn.textContent == "" &&
+    stateWarn.textContent == "" &&
+    checkboxWarn.textContent == ""
+  ) {
+    userDataHeader.textContent = "YOUR DATA";
+    userData.innerHTML +=
+      "<li>Email: " +
+      email +
+      "</li><li>Password: " +
+      pass +
+      "</li><li>First Name: " +
+      fName +
+      "</li><li>Last Name: " +
+      lName +
+      "</li><li>Date :" +
+      calendar +
+      "</li><li>Gender: " +
+      userGender +
+      "</li><li>Address :" +
+      state +
+      "</li>";
+  }
+}
+function checkbox() {
+  var checkBox1 = document.getElementById("check");
+  if (checkBox1.checked == false) {
+    // not check
+    document.getElementById("check").value = "1";
+  } else {
+    document.getElementById("check").value = "2";
   }
 }

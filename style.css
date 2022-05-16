@@ -22,3 +22,14 @@ img {
 #lNameWarn {
   color: red;
 }
+#userDataHeader {
+  font-size: xx-large;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: green;
+  color: wheat;
+}
+ul li {
+  list-style-type: none;
+  font-weight: bold;
+}
