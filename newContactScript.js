@@ -46,7 +46,7 @@ function validate() {
   if (
     fNameWarning.textContent == "" &&
     lNameWarning.textContent == "" &&
-    emailWarning.textContent == ss"" &&
+    emailWarning.textContent == "" &&
     passwordWarning.textContent == "" &&
     paraForCheckbox.textContent == ""
   ) {
@@ -92,9 +92,9 @@ function chkTwo() {
     document.getElementById("checkBox2").value = "2";
   }
 }
-function changeColor() {
-  document.getElementById("fName").style.backgroundColor = "Red";
-}
+// function changeColor() {
+//   document.getElementById("fName").style.backgroundColor = "Red";
+// }
 // function changeColor2() {
 //   document.getElementById("password").style.backgroundColor = "lightgreen";
 // }
