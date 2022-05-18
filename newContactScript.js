@@ -9,6 +9,7 @@ var successHeader = document.getElementById("successHeader");
 var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
 
 function validate() {
+  localStorage.setItem("name", "HAHA");
   userData.innerHTML = "";
   var fName = document.getElementById("fName").value;
   var lName = document.getElementById("lName").value;
@@ -68,7 +69,8 @@ function validate() {
       "</td>";
   }
   if (!(val1 == "2" && val2 == "2")) {
-    document.getElementById("paraForCheckbox").innerHTML = "Please check Both!";
+    document.getElementById("paraForCheckbox").innerHTML =
+      "Please check Both!" + localStorage.getItem("id");
     document.getElementById("paraForCheckbox").style.color = "red";
   } else {
     document.getElementById("paraForCheckbox").innerHTML = "";
