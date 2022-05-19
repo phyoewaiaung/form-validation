@@ -89,6 +89,10 @@ function validate() {
     stateWarn.textContent == "" &&
     checkboxWarn.textContent == ""
   ) {
+    localStorage.setItem("email", email);
+    localStorage.setItem("password", pass);
+    document.getElementById("successText").textContent =
+      "Successfully Created Your Account and Click Sign In Button";
     userDataHeader.textContent = "YOUR DATA";
     userData.innerHTML +=
       "<li>Email: " +
