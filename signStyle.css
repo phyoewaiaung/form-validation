@@ -1,3 +1,7 @@
+*{
+  font-family: Helvetica;
+  background-color: rgb(240, 237, 233);
+}
 #email {
   width: 75%;
   height: 40px;
@@ -51,16 +55,15 @@ a {
   font-weight: 500;
 }
 #nav_blue {
-  background-color: blue;
-  font-family: Arial, Helvetica, sans-serif;
   border: 0ch;
   border-radius: 00.2em;
 }
-#nav_white {
-  color: antiquewhite;
+#nav_style {
+  font-size: 2em;
 }
 #backToHome {
   width: 100px;
+  padding-top: 3px;
   height: 30px;
   background-color: green;
   color: #fff;
