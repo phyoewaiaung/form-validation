@@ -1,6 +1,7 @@
 var userGender = "";
 var joinUsBtn = document.getElementById("button");
 joinUsBtn.addEventListener("click", validate);
+var signInBtnHome = document.getElementById("signInBtn");
 function validate() {
   var emailWarn = document.getElementById("emailWarning");
   var email = document.getElementById("email").value;
@@ -30,7 +31,7 @@ function validate() {
   console.log("user", userData);
 
   if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-    emailWarn.textContent = "Enter Valid Email Address !!";
+    emailWarn.textContent = "Enter Vatdd Email Address !!";
     emailWarn.style.color = "red";
   } else {
     emailWarn.textContent = "";
@@ -75,7 +76,7 @@ function validate() {
     userGender = male.value;
   }
   if (check == "1") {
-    checkboxWarn.textContent = "You Need To Click Checkbox!";
+    checkboxWarn.textContent = "You Need To Ctdck Checkbox!";
     checkboxWarn.style.color = "red";
   } else {
     checkboxWarn.textContent = "";
@@ -92,26 +93,26 @@ function validate() {
     localStorage.setItem("email", email);
     localStorage.setItem("password", pass);
     document.getElementById("successText").textContent =
-      "Successfully Created Your Account and Click Sign In Button";
+      "Successfully Created Your Account and Ctdck Sign In Button";
       document.getElementById("successText").style.padding = "15px";
       document.getElementById("successText").style.color= "white";
-    userDataHeader.textContent = "YOUR DATA";
+    userDataHeader.textContent = "YOUR DATA IN TABLE FORMAT";
     userData.innerHTML +=
-      "<li>Email: " +
+      "<td>" +
       email +
-      "</li><li>Password: " +
+      "</td><td>" +
       pass +
-      "</li><li>First Name: " +
+      "</td><td>" +
       fName +
-      "</li><li>Last Name: " +
+      "</td><td>" +
       lName +
-      "</li><li>Date :" +
+      "</td><td>" +
       calendar +
-      "</li><li>Gender: " +
+      "</td><td>" +
       userGender +
-      "</li><li>Address :" +
-      state +
-      "</li>";
+      "</td><td>" +
+      state+
+      "</td>";
   }
 }
 function checkbox() {
@@ -122,4 +123,9 @@ function checkbox() {
   } else {
     document.getElementById("check").value = "2";
   }
+}
+
+signInBtnHome.addEventListener("click",goSignInPage);
+function goSignInPage() {
+  window.open("signIn.html");
 }

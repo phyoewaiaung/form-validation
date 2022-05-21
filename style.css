@@ -1,3 +1,6 @@
+*{
+  font-family:Helvetica;
+}
 .container{
   display: flex;
   margin-top: 30px;
@@ -54,13 +57,21 @@ p{
   }
 }
 .blinking{
-  animation: blink 2s linear infinite;
-  color: blue;
+  /* animation: blink 2s linear infinite; */
   font-size: 2em;
   font-weight: bolder;
   font-family: cursive;
 }
-
+#signInBtn{
+  color: blue;
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 30px;
+  cursor: pointer;
+}
+#signInBtn:hover{
+  text-shadow: 1px 1px black;
+}
 @media(max-width:992px) {
   .container{
     flex-direction: column;
