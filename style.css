@@ -1,3 +1,9 @@
+.container{
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+}
+
 img {
   width: 80%;
   height: 400px;
@@ -32,4 +38,32 @@ img {
 ul li {
   list-style-type: none;
   font-weight: bold;
+}
+p{
+  font-weight: bold;
+}
+#modalColor{
+  background-color: rgb(220, 243, 255);
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.5;
+  }
+}
+.blinking{
+  animation: blink 2s linear infinite;
+  color: blue;
+  font-size: 2em;
+  font-weight: bolder;
+  font-family: cursive;
+}
+
+@media(max-width:992px) {
+  .container{
+    flex-direction: column;
+
+  }
 }

@@ -93,6 +93,8 @@ function validate() {
     localStorage.setItem("password", pass);
     document.getElementById("successText").textContent =
       "Successfully Created Your Account and Click Sign In Button";
+      document.getElementById("successText").style.padding = "15px";
+      document.getElementById("successText").style.color= "white";
     userDataHeader.textContent = "YOUR DATA";
     userData.innerHTML +=
       "<li>Email: " +

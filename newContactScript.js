@@ -5,6 +5,11 @@ var passwordWarning = document.getElementById("passwordWarning");
 var userData = document.getElementById("userData");
 var userDataWithTable = document.getElementById("userDataWithTable");
 var successHeader = document.getElementById("successHeader");
+var homeBtn = document.getElementById("homePageBtn");
+homeBtn.addEventListener("click", goHomePage);
+function goHomePage() {
+  window.open("home.html");
+}
 
 var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
 
@@ -70,7 +75,7 @@ function validate() {
   }
   if (!(val1 == "2" && val2 == "2")) {
     document.getElementById("paraForCheckbox").innerHTML =
-      "Please check Both!" + localStorage.getItem("id");
+      "Please check Both!";
     document.getElementById("paraForCheckbox").style.color = "red";
   } else {
     document.getElementById("paraForCheckbox").innerHTML = "";

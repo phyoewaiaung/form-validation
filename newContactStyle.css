@@ -58,3 +58,23 @@ td {
   border-radius: 0.2em;
   height: 30px;
 }
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+a{
+  text-decoration: none;
+  color: blue;
+}
+#homePageBtn{
+  background-color: blue;
+  color: #fff;
+  font-size: 1.2em;
+  border-radius: .5em;
+  margin-right: 30px;
+  height: 40px;
+}
+#homePageBtn:hover{
+  box-shadow: 3px 2px black;
+  cursor: pointer;
+}
