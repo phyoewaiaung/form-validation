@@ -12,7 +12,7 @@ nike.style.marginTop = "0px";
 nike.style.textShadow = "1px 1px green";
 homeBtn.addEventListener("click", goHomePage);
 function goHomePage() {
-  window.open("home.html");
+  window.open("index.html");
 }
 
 var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
