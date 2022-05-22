@@ -1,5 +1,7 @@
 var userGender = "";
 var joinUsBtn = document.getElementById("button");
+var modalHead = document.querySelector(".modalHead");
+modalHead.style.fontWeight = "700";
 joinUsBtn.addEventListener("click", validate);
 var signInBtnHome = document.getElementById("signInBtn");
 function validate() {
@@ -76,16 +78,14 @@ function validate() {
   } else {
     stateWarn.textContent = "";
   }
-  if (female.checked) {
-    userGender = female.value;
-    genderWarn.textContent = "";
-  }
-  if (male.checked) {
-    userGender = male.value;
-    genderWarn.textContent = "";
-  }else {
-    genderWarn.textContent = "Choose Your Gender!";
-  }
+    if(female.checked){
+      userGender = female.value;
+      genderWarn.textContent = "";
+    }
+    if(male.checked){
+      userGender = male.value;
+      genderWarn.textContent = "";
+    }
   if (check == "1") {
     checkboxWarn.textContent = "You Need To Ctdck Checkbox!";
     checkboxWarn.style.color = "red";
