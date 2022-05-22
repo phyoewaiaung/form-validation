@@ -4,7 +4,10 @@ var modalHead = document.querySelector(".modalHead");
 modalHead.style.fontWeight = "700";
 joinUsBtn.addEventListener("click", validate);
 var signInBtnHome = document.getElementById("signInBtn");
+
+//Function validate
 function validate() {
+
   var emailWarn = document.getElementById("emailWarning");
   var email = document.getElementById("email").value;
   var passWarn = document.getElementById("passwordWarning");
