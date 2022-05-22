@@ -81,4 +81,8 @@ a{
 #homePageBtn:hover{
   box-shadow: 3px 2px black;
   cursor: pointer;
+  text-shadow: 3px 3px green;
+}
+.nike:hover{
+  text-shadow: 3px 3px green;
 }

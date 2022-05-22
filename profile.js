@@ -8,6 +8,10 @@ var view3 = document.getElementById("view3");
 var edit3 = document.getElementById("edit3");
 var del3 = document.getElementById("delete3");
 var data = document.getElementById("content");
+var profileHead = document.getElementById("profileHeading");
+profileHead.style.color = "blue";
+profileHead.style.fontWeight = "700";
+profileHead.style.textShadow = "2px 2px green"
 
 view.addEventListener("click", viewFun);
 function viewFun() {

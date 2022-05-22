@@ -61,6 +61,9 @@ a {
 #nav_style {
   font-size: 2em;
 }
+#nav_style:hover{
+  text-shadow: 1px 1px green;
+}
 #backToHome {
   width: 100px;
   padding-top: 3px;

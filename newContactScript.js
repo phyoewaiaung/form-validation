@@ -1,3 +1,4 @@
+var nike = document.querySelector(".nike");
 var fNameWarning = document.getElementById("fNameWarning");
 var lNameWarning = document.getElementById("lNameWarning");
 var emailWarning = document.getElementById("emailWarning");
@@ -6,6 +7,9 @@ var userData = document.getElementById("userData");
 var userDataWithTable = document.getElementById("userDataWithTable");
 var successHeader = document.getElementById("successHeader");
 var homeBtn = document.getElementById("homePageBtn");
+nike.addEventListener("click",goHomePage);
+nike.style.marginTop = "0px";
+nike.style.textShadow = "1px 1px green";
 homeBtn.addEventListener("click", goHomePage);
 function goHomePage() {
   window.open("home.html");

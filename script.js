@@ -35,7 +35,7 @@ function validate() {
   console.log("user", userData);
 
   if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-    emailWarn.textContent = "Enter Vatdd Email Address !!";
+    emailWarn.textContent = "Enter Valid Email Address !!";
     emailWarn.style.color = "red";
   } else {
     emailWarn.textContent = "";
@@ -68,6 +68,7 @@ function validate() {
   else {
     if(!dateFormat.test(calendar)){
       calendarWarn.textContent = "Invalid Format! Type In dd/mm/yyyy";
+      calendarWarn.style.color = "red";
     }else{
       calendarWarn.textContent = "";
     }

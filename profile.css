@@ -3,11 +3,15 @@
 }
 #backToHome {
   width: 100px;
-  height: 30px;
+  height: 33px;
   background-color: green;
   color: #fff;
   text-align: center;
   border: 0ch;
   border-radius: 0.2em;
   text-decoration: none;
+  padding-top: 5px;
+}
+#backToHome:hover{
+  box-shadow: 2px 2px black;
 }
