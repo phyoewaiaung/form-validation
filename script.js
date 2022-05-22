@@ -20,6 +20,7 @@ function validate() {
   var checkboxWarn = document.getElementById("checkboxWarning");
   var check = document.getElementById("check").value;
   var userDataHeader = document.getElementById("userDataHeader");
+  var dateFormat = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
   var userData = document.getElementById("userData");
   var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
   console.log("email", email);
@@ -60,8 +61,13 @@ function validate() {
   if (calendar == "") {
     calendarWarn.textContent = "Type Your Date in format";
     calendarWarn.style.color = "red";
-  } else {
-    calendarWarn.textContent = "";
+  }
+  else {
+    if(!dateFormat.test(calendar)){
+      calendarWarn.textContent = "Invalid Format! Type In dd/mm/yyyy";
+    }else{
+      calendarWarn.textContent = "";
+    }
   }
   if (state == "") {
     stateWarn.textContent = "Choose Your State";
