@@ -12,6 +12,7 @@ function validate() {
   var lNameWarn = document.getElementById("lNameWarn");
   var lName = document.getElementById("lastName").value;
   var calendarWarn = document.getElementById("calendarWarning");
+  var genderWarn = document.getElementById("genderWarning");
   var calendar = document.getElementById("calendar").value;
   var stateWarn = document.getElementById("stateWarning");
   var state = document.getElementById("states").value;
@@ -77,9 +78,13 @@ function validate() {
   }
   if (female.checked) {
     userGender = female.value;
+    genderWarn.textContent = "";
   }
   if (male.checked) {
     userGender = male.value;
+    genderWarn.textContent = "";
+  }else {
+    genderWarn.textContent = "Choose Your Gender!";
   }
   if (check == "1") {
     checkboxWarn.textContent = "You Need To Ctdck Checkbox!";

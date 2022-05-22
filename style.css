@@ -31,6 +31,9 @@ img {
 #lNameWarn {
   color: red;
 }
+#genderWarning{
+  color: red;
+}
 #userDataHeader {
   font-size: xx-large;
   margin-top: 20px;
