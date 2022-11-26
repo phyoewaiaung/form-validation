@@ -1,5 +1,7 @@
 var compare = document.getElementById("login");
 var invalidUser = document.getElementById("invalidUser");
+var forgot = document.getElementById("forgot");
+var notNow = document.getElementById("notNow");
 
 compare.addEventListener("click", isEqual);
 function isEqual() {
@@ -20,3 +22,5 @@ function goNewContact() {
   localStorage.setItem("id", "Testing Again LocalStorage!");
   window.open("newContact.html");
 }
+forgot.addEventListener("click",()=> alert("Forgot"));
+notNow.addEventListener("click",() => alert("Not Now"));

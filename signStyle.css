@@ -2,6 +2,9 @@
   font-family: Helvetica;
   background-color: rgb(240, 237, 233);
 }
+.container{
+  width: 600px;
+}
 #email {
   width: 75%;
   height: 40px;
@@ -43,7 +46,7 @@
 #btnBg:hover {
   box-shadow: 2px 2px 2px black;
 }
-#forgots {
+#forgot {
   color: blue;
   font-weight: 500;
 }
