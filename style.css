@@ -35,11 +35,11 @@ img {
   color: red;
 }
 #userDataHeader {
-  font-size: xx-large;
+  font-size: large;
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: green;
-  color: wheat;
+  color: green;
+  font-weight: bolder;
 }
 ul li {
   list-style-type: none;
